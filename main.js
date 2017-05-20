@@ -35,11 +35,11 @@ app.get('/', function (req, res) {
             });
         });
     } else {
-		var stream = fs.createReadStream(filePath);
-		stream.on('open', function () {
-			res.setHeader('Content-Type', 'image/png');
-			stream.pipe(res);
-		});
+        var stream = fs.createReadStream(filePath);
+        stream.on('open', function () {
+            res.setHeader('Content-Type', 'image/png');
+            stream.pipe(res);
+        });
     }
 });
 
