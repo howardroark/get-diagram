@@ -7,6 +7,17 @@ $ npm install
 $ npm start
 ```
 
+## How it works
+
+```
+![](http://localhost:3000?[
+  "Andrew->China: Says Hello", 
+  "Note right of China: China thinks about it", 
+  "China-->Andrew: How are you?", 
+  "Andrew->>China: I am good thanks!"
+])
+```
+
 [http://localhost:3000?[
   "Andrew->China: Says Hello", 
   "Note right of China: China thinks about it", 
