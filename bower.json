@@ -1,0 +1,6 @@
+{
+  "name": "get-diagrams",
+  "dependencies": {
+    "js-sequence-diagrams": "*"
+  }
+}
