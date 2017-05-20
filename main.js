@@ -26,18 +26,18 @@ app.get('/', function (req, res) {
     var filePath = './tmp/' + hash + '.png';
     var cmd = phantomjs.path + ' rasterize.js \'http://localhost:3000/diagram?' + query + '\' ' + filePath;
 
+    res.setHeader('Content-Type', 'image/png');
+
     if (!fs.existsSync(filePath)) {
         exec(cmd, function (err, stdout, stderr) {
             var stream = fs.createReadStream(filePath);
             stream.on('open', function () {
-                res.setHeader('Content-Type', 'image/png');
                 stream.pipe(res);
             });
         });
     } else {
         var stream = fs.createReadStream(filePath);
         stream.on('open', function () {
-            res.setHeader('Content-Type', 'image/png');
             stream.pipe(res);
         });
     }
