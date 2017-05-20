@@ -1,0 +1,14 @@
+<html>
+<script src="bower_components/bower-webfontloader/webfont.js"></script>
+<script src="bower_components/snap.svg/dist/snap.svg-min.js"></script>
+<script src="bower_components/underscore/underscore-min.js"></script>
+<script src="bower_components/js-sequence-diagrams/dist/sequence-diagram-min.js"></script>
+<link href="bower_components/js-sequence-diagrams/dist/sequence-diagram-min.css" rel="stylesheet" />
+<div id="diagram"></div>
+<script>
+  var query = JSON.parse(decodeURI("{{ query }}"));
+  var diagram = Diagram.parse(query.join("\n"));
+  var options = {theme: 'hand'};
+  diagram.drawSVG('diagram', options);
+</script>
+</html>

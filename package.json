@@ -1,0 +1,18 @@
+{
+  "name": "get-diagrams",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon -e js,njk main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "mkdirp": "^0.5.1",
+    "nunjucks": "^3.0.0",
+    "phantomjs-prebuilt": "^2.1.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
