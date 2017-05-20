@@ -1,4 +1,4 @@
-> Note: Since GitHub migrated from the original human friendly interpretation of John Gruber's Markdown to the highly specific CommonMark variation this no longer works in it's ideal form.
+> Note: Since GitHub [migrated](https://githubengineering.com/a-formal-spec-for-github-markdown/) from the original human friendly interpretation of John Gruber's Markdown to the highly specific CommonMark variation this no longer works in it's ideal form.
 
 # get-sequence-diagrams
 
