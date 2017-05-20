@@ -1,4 +1,4 @@
-# get-diagrams
+# get-sequence-diagrams
 
 A simple way to embed sequence diagrams in markdown.
 
