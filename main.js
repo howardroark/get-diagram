@@ -4,7 +4,6 @@ var url = require('url');
 var path = require('path');
 var exec = require('child_process').exec;
 var phantomjs = require('phantomjs-prebuilt');
-var crypto = require('crypto');
 var mkdirp = require('mkdirp');
 
 mkdirp.sync('tmp');
@@ -21,9 +20,7 @@ nunjucks.configure('views', {
 app.get('/', function (req, res) {
     var i = req.url.indexOf('?');
     var query = req.url.substr(i+1);
-    var hash = crypto.createHash('md5').update(query).digest('hex');
-    var filePath = './tmp/' + hash + '.png';
-    var cmd = phantomjs.path + ' rasterize.js \'http://localhost:3000/diagram?' + query + '\' ' + filePath;
+    var cmd = phantomjs.path + ' rasterize.js \'http://localhost:3000/diagram?' + query + '\' ';
 
     res.setHeader('Content-Type', 'image/png');
 
