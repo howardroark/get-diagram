@@ -10,6 +10,11 @@ mkdirp.sync('tmp');
 
 var app = express();
 
+var baseURL = 'http://localhost:3000';
+if (process.env.ENV === 'production') {
+    baseURL = 'https://get-diagram.herokuapp.com';
+}
+
 app.use(express.static('public'));
 
 nunjucks.configure('views', {
@@ -20,7 +25,7 @@ nunjucks.configure('views', {
 app.get('/', function (req, res) {
     var i = req.url.indexOf('?');
     var query = req.url.substr(i+1);
-    var cmd = phantomjs.path + ' rasterize.js \'http://localhost:3000/diagram?' + query + '\' ';
+    var cmd = phantomjs.path + ' rasterize.js \'' + baseURL + '/diagram?' + query + '\' ';
 
     res.setHeader('Content-Type', 'image/png');
 
