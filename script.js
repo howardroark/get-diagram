@@ -1,9 +1,7 @@
 var input = $('textarea#markdown').val();
 $('#output').html(marked(input));
 
-$('button#render').click(function (e) {
+$('#input textarea').on('change keyup paste', function () {
     var input = $('textarea#markdown').val();
     $('#output').html(marked(input));
-    e.preventDefault();
-    return false;
 });
