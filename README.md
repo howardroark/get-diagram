@@ -12,7 +12,7 @@ $ npm start
 ## How it works
 
 ```
-![](http://localhost:3000?[
+![](https://get-diagram.herokuapp.com?[
   "Andrew->China: Says Hello", 
   "Note right of China: China thinks about it", 
   "China-->Andrew: How are you?", 
