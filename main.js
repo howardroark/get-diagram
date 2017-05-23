@@ -2,7 +2,6 @@ var express = require('express');
 var nunjucks = require('nunjucks');
 var url = require('url');
 var path = require('path');
-var fs = require('fs');
 var exec = require('child_process').exec;
 var phantomjs = require('phantomjs-prebuilt');
 var crypto = require('crypto');
@@ -28,19 +27,15 @@ app.get('/', function (req, res) {
 
     res.setHeader('Content-Type', 'image/png');
 
-    if (!fs.existsSync(filePath)) {
-        exec(cmd, function (err, stdout, stderr) {
-            var stream = fs.createReadStream(filePath);
-            stream.on('open', function () {
-                stream.pipe(res);
-            });
+    // TODO: Cache in a way that will work on Heroku
+    exec(cmd, function (err, stdout, stderr) {
+        var img = new Buffer(stdout, 'base64');
+        res.writeHead(200, {
+            'Content-Type': 'image/png',
+            'Content-Length': img.length
         });
-    } else {
-        var stream = fs.createReadStream(filePath);
-        stream.on('open', function () {
-            stream.pipe(res);
-        });
-    }
+        res.end(img);
+    });
 });
 
 app.get('/diagram', function (req, res) {

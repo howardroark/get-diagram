@@ -47,9 +47,9 @@ if (system.args.length < 3 || system.args.length > 5) {
                 var width = page.evaluate(function(){
                     return document.getElementsByTagName('svg')[0].width.baseVal.value;
                 });
-                console.log('Crop to: '+width+"x"+height);
                 page.clipRect = { top: 0, left: 0, width: width, height: height };
-                page.render(output);
+                var base64 = page.renderBase64('PNG');
+                console.log(base64);
                 phantom.exit();
             }, 200);
         }
