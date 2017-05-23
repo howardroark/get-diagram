@@ -31,7 +31,6 @@ app.get('/', function (req, res) {
 
     // TODO: Cache in a way that will work on Heroku
     exec(cmd, function (err, stdout, stderr) {
-        console.log(err, stdout, stderr);
         var img = new Buffer(stdout, 'base64');
         res.writeHead(200, {
             'Content-Type': 'image/png',
