@@ -23,7 +23,7 @@ app.get('/:type', function (req, res) {
     var type = req.params.type;
     var i = req.url.indexOf('?');
     var query = req.url.substr(i+1);
-    var cmd = phantomjs.path + ' rasterize.js \'' + baseURL + '/render/' + type + '/?' + query + '\' ';
+    var cmd = phantomjs.path + ' rasterize.js \'' + baseURL + '/render/' + type + '?' + query + '\' ';
 
     // TODO: Cache in a way that will work on Heroku
     exec(cmd, function (err, stdout, stderr) {
