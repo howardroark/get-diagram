@@ -36,11 +36,12 @@ app.get('/:type', function (req, res) {
     });
 });
 
-app.get('/render/sequence', function (req, res) {
+app.get('/render/:type', function (req, res) {
+    var type = req.params.type;
     var i = req.url.indexOf('?');
     var query = req.url.substr(i+1);
 
-    res.render('diagram.njk', { query: query });
+    res.render(type + '.njk', { query: query });
 });
 
 app.listen(process.env.PORT || 3000);
