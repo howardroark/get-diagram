@@ -4,9 +4,6 @@ var url = require('url');
 var path = require('path');
 var exec = require('child_process').exec;
 var phantomjs = require('phantomjs-prebuilt');
-var mkdirp = require('mkdirp');
-
-mkdirp.sync('tmp');
 
 var app = express();
 
