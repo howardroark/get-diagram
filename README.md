@@ -2,7 +2,7 @@
 
 # get-diagram
 
-A simple way to embed sequence diagrams in markdown.
+A simple way to embed diagrams in markdown.
 
 ```
 $ npm install
