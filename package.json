@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "express": "^4.15.3",
-    "mkdirp": "^0.5.1",
     "nunjucks": "^3.0.0",
     "phantomjs-prebuilt": "^2.1.14",
     "bower": "^1.8.0",
