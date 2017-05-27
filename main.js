@@ -27,8 +27,6 @@ app.get('/', function (req, res) {
     var query = req.url.substr(i+1);
     var cmd = phantomjs.path + ' rasterize.js \'' + baseURL + '/diagram?' + query + '\' ';
 
-    res.setHeader('Content-Type', 'image/png');
-
     // TODO: Cache in a way that will work on Heroku
     exec(cmd, function (err, stdout, stderr) {
         var img = new Buffer(stdout, 'base64');
