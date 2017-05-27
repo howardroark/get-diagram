@@ -4,7 +4,7 @@ var page = require('webpage').create(),
     address, size;
 
 address = system.args[1];
-page.viewportSize = { width: 600, height: 600 };
+page.viewportSize = { width: 1000, height: 1000 };
 
 page.open(address, function (status) {
     if (status !== 'success') {
