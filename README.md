@@ -1,6 +1,6 @@
 > Note: Since GitHub [migrated](https://githubengineering.com/a-formal-spec-for-github-markdown/) from the original human friendly interpretation of John Gruber's Markdown to the highly specific CommonMark variation this no longer works in it's ideal form.
 
-# get-diagrams
+# get-diagram
 
 A simple way to embed sequence diagrams in markdown.
 
@@ -20,6 +20,6 @@ $ npm start
 ])
 ```
 
-[Interactive funcational example of the above](https://howardroark.github.io/get-diagrams/)
+[Interactive funcational example of the above](https://howardroark.github.io/get-diagram/)
 
 Inspired by [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/) and [gravizo](http://www.gravizo.com/)

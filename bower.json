@@ -1,5 +1,5 @@
 {
-  "name": "get-diagrams",
+  "name": "get-diagram",
   "dependencies": {
     "js-sequence-diagrams": "*"
   }
