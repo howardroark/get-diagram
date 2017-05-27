@@ -12,7 +12,7 @@ $ npm start
 ## How it works
 
 ```
-![](https://get-diagram.herokuapp.com?[
+![](https://get-diagram.herokuapp.com/sequence?[
   "Andrew->China: Says Hello", 
   "Note right of China: China thinks about it", 
   "China-->Andrew: How are you?", 
