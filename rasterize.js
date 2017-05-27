@@ -1,7 +1,7 @@
 "use strict";
 var page = require('webpage').create(),
     system = require('system'),
-    address, size, pageWidth, pageHeight;
+    address, size;
 
 address = system.args[1];
 page.viewportSize = { width: 600, height: 600 };
