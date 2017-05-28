@@ -6,8 +6,8 @@
 <link href="/vendor/js-sequence-diagrams/dist/sequence-diagram-min.css" rel="stylesheet" />
 <div id="diagram"></div>
 <script>
-  var query = JSON.parse(decodeURI("{{ query }}"));
-  var diagram = Diagram.parse(query.join("\n"));
+  var query = decodeURI("{{ query }}").replace(";","\n");
+  var diagram = Diagram.parse(query);
   var options = {theme: 'hand'};
   diagram.drawSVG('diagram', options);
 </script>
