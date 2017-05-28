@@ -21,8 +21,8 @@ nunjucks.configure('views', {
 
 app.get('/:type', function (req, res) {
     var type = req.params.type;
-    var i = req.url.indexOf('?');
-    var query = req.url.substr(i+1);
+    var url = req.url;
+    var query = url.substr(url.indexOf('?')+1);
     var cmd = phantomjs.path + ' rasterize.js \'' + baseURL + '/render/' + type + '?' + query + '\' ';
 
     // TODO: Cache in a way that will work on Heroku
@@ -38,8 +38,8 @@ app.get('/:type', function (req, res) {
 
 app.get('/render/:type', function (req, res) {
     var type = req.params.type;
-    var i = req.url.indexOf('?');
-    var query = req.url.substr(i+1);
+    var url = req.url;
+    var query = url.substr(url.indexOf('?')+1);
 
     res.render(type + '.njk', { query: query });
 });
