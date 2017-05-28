@@ -12,12 +12,12 @@ $ npm start
 ## How it works
 
 ```
-![](https://get-diagram.herokuapp.com/sequence?[
-  "Andrew->China: Says Hello", 
-  "Note right of China: China thinks about it", 
-  "China-->Andrew: How are you?", 
-  "Andrew->>China: I am good thanks!"
-])
+![](https://get-diagram.herokuapp.com/sequence?
+  Andrew->China: Says Hello;
+  Note right of China: China thinks about it;
+  China-->Andrew: How are you?;
+  Andrew->>China: I am good thanks!;
+)
 ```
 
 [Interactive funcational example of the above](https://howardroark.github.io/get-diagram/)
