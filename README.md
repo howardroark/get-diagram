@@ -15,7 +15,7 @@ A simple way to embed diagrams in markdown.
 
 **[Interactive demo](https://howardroark.github.io/get-diagram/)**
 
-# Development
+## Development
 
 ```
 $ npm install
