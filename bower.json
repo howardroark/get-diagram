@@ -1,6 +1,9 @@
 {
   "name": "get-diagram",
   "dependencies": {
-    "js-sequence-diagrams": "*"
+    "js-sequence-diagrams": "*",
+    "marked": "^0.3.6",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
   }
 }
