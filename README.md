@@ -20,6 +20,6 @@ $ npm start
 )
 ```
 
-[Interactive funcational example of the above](https://howardroark.github.io/get-diagram/)
+**[Interactive demo](https://howardroark.github.io/get-diagram/)**
 
 Inspired by [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/) and [gravizo](http://www.gravizo.com/)
