@@ -5,13 +5,6 @@
 A simple way to embed diagrams in markdown.
 
 ```
-$ npm install
-$ npm start
-```
-
-## How it works
-
-```
 ![](https://get-diagram.herokuapp.com/sequence?
   Andrew->China: Says Hello;
   Note right of China: China thinks about it;
@@ -21,5 +14,12 @@ $ npm start
 ```
 
 **[Interactive demo](https://howardroark.github.io/get-diagram/)**
+
+# Development
+
+```
+$ npm install
+$ npm start
+```
 
 Inspired by [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/) and [gravizo](http://www.gravizo.com/)
