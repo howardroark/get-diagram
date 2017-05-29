@@ -13,7 +13,7 @@ A simple way to embed diagrams in markdown.
 )
 ```
 
-**[Interactive demo](https://howardroark.github.io/get-diagram/)**
+**[Interactive demo](https://get-diagram.herokuapp.com)**
 
 ## Development
 
